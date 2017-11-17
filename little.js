@@ -1,14 +1,8 @@
-// Añadiendo para directiva FOR
+// Añadiendo para directiva IF
 const app = new Vue({
     el:'#app', // id del div donde queremos que funcione VUE
-    data: {
-        members: ["Raul","Montse","Alejandro","Unicornio"],
-        membersObject:[{name:"Raul"},
-                        {name: "Montse"},
-                        {name: "Alejandro"},
-                        {name: "Unicornio"}
-                       ],    
-        show: true, 
+    data: {    // OBJETO.DATA importante, aquí van las variables
+        show: true, // recordar JS true y false siempre minuscula
         message: "Hola Alea!!",
         image: "./img/estimar.jpg",
     },
@@ -22,7 +16,6 @@ const app = new Vue({
             }            
             */
             this.show = !this.show  // refactor de lo de arriba
-            alert('ME HAN LLAMADO')
         }
     }
 
