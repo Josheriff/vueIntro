@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro a Vue</title>
+</head>
+<body>
+    <div id="app">
+
+        <div>
+            {{ message }} <!-- data binding en los 2 lados -->
+            <img :src="imagen"/> <!-- hay que poner la directiva 'v-bind:' para binding en etiquetas-->
+                                           <!-- si son atributos del tag con poner ":" ya vale para directiva -->
+        </div>
+
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+   <script src="./little.js"></script>
+</body>
+</html>
