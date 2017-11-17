@@ -1,4 +1,4 @@
-<!-- DIRECTIVA IF -->
+<!-- DIRECTIVA FOR -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +12,19 @@
         
         <div v-if = "show"> <!-- Estamos llamando a message.show -->
             {{ message }} <!-- data binding en los 2 lados -->
-            <img v-bind:src="image"/> <!-- hay que poner la directiva 'v-bind:' para binding en etiquetas-->
-                                           <!-- si son atributos del tag con poner ":" ya vale para directiva --> 
-        </div>
+            <img :src="image"/>                                             
+        <p v-for="member in members">{{member}}</p> 
+        
+        <br>
+        <br>
 
-        <button v-on:click = "cucuTras()"> Cucu / Tras </button> <!-- podemos sustituir v-on: con @-->
-           
+        <p v-for="memberName in membersObject">{{memberName.name}}</p>
+        
+
+         <!--Truco porque al haber doble binding si no decimos la key, no se puede modificar desde front--> 
+        <p v-for="(memberName, index) in membersObject" :key="index">{{memberName.name}}</p>
+        </div>
+        <button @click = "cucuTras()"> Cucu / Tras </button> 
     </div>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
    <script src="./little.js"></script>
