@@ -1,0 +1,22 @@
+<!-- DIRECTIVA FOR -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro a Vue</title>
+</head>
+<body>
+    <div id="app">
+        <alea-members v-for="(member,index) in members"
+            :name="member.name"
+            :superpower="member.superpower" 
+            :image="member.image"
+        >   <!--IMPORTANTE LOS : DELANTE DE LAS PROPIEDADES, QUE AHORA ESTAMOS "BINDEANDO" -->
+        </alea-members>
+    </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js"></script>
+   <script src="./little.js"></script>
+</body>
+</html>
